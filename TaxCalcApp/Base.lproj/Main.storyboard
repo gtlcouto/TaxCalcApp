@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,104 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold_bg" translatesAutoresizingMaskIntoConstraints="NO" id="5Ms-mG-beD">
+                                <rect key="frame" x="-9" y="0.0" width="618" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter the price of the product" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uso-xt-D23">
+                                <rect key="frame" x="160" y="146" width="280" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="R0o-aV-MXi"/>
+                                    <constraint firstAttribute="height" constant="20.5" id="eSA-eT-yec"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VaV-si-fee">
+                                <rect key="frame" x="244" y="237" width="113" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="naM-Ec-7ER"/>
+                                    <constraint firstAttribute="height" constant="28" id="zCJ-rZ-Qjq"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="CA"/>
+                                    <segment title="CHI"/>
+                                    <segment title="NY"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiu-cr-6Sy">
+                                <rect key="frame" x="229" y="285" width="141" height="30"/>
+                                <color key="backgroundColor" red="0.77558169157608692" green="0.76543858962527822" blue="0.71052218573568637" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="141" id="AJY-vn-AzP"/>
+                                    <constraint firstAttribute="height" constant="30" id="MWR-6r-bll"/>
+                                </constraints>
+                                <state key="normal" title="Calculate Tax">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCalculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kgo-zG-BcO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHQ-uz-Sde">
+                                <rect key="frame" x="160" y="316" width="280" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="9ng-mZ-itI"/>
+                                    <constraint firstAttribute="height" constant="38.5" id="fLr-1M-zWz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-gv-hc0">
+                                <rect key="frame" x="241" y="187" width="119" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WVi-ia-or9"/>
+                                    <constraint firstAttribute="width" constant="119" id="YA8-on-CIU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="VaV-si-fee" secondAttribute="centerX" id="34i-bj-hAa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Ms-mG-beD" secondAttribute="bottom" id="3LG-9l-uV1"/>
+                            <constraint firstAttribute="centerX" secondItem="uso-xt-D23" secondAttribute="centerX" id="89T-sr-yiW"/>
+                            <constraint firstItem="5Ms-mG-beD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-25" id="9Pl-Z7-e5I"/>
+                            <constraint firstAttribute="centerX" secondItem="AHQ-uz-Sde" secondAttribute="centerX" id="CRJ-LE-nhm"/>
+                            <constraint firstAttribute="centerX" secondItem="hiu-cr-6Sy" secondAttribute="centerX" id="IeS-Ug-j4P"/>
+                            <constraint firstItem="VaV-si-fee" firstAttribute="top" secondItem="Kzj-gv-hc0" secondAttribute="bottom" constant="20" id="Iir-q8-JqU"/>
+                            <constraint firstItem="AHQ-uz-Sde" firstAttribute="top" secondItem="hiu-cr-6Sy" secondAttribute="bottom" constant="1" id="Z6l-26-axr"/>
+                            <constraint firstItem="Kzj-gv-hc0" firstAttribute="top" secondItem="uso-xt-D23" secondAttribute="bottom" constant="20" id="br2-4W-3dY"/>
+                            <constraint firstAttribute="centerX" secondItem="VaV-si-fee" secondAttribute="centerX" id="gh6-GN-ftK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Ms-mG-beD" secondAttribute="trailing" constant="-25" id="glS-Cp-tcU"/>
+                            <constraint firstItem="5Ms-mG-beD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="mGM-ph-v5f"/>
+                            <constraint firstAttribute="centerX" secondItem="Kzj-gv-hc0" secondAttribute="centerX" id="obK-JX-58E"/>
+                            <constraint firstAttribute="centerY" secondItem="hiu-cr-6Sy" secondAttribute="centerY" id="qot-eK-mOl"/>
+                            <constraint firstItem="hiu-cr-6Sy" firstAttribute="top" secondItem="VaV-si-fee" secondAttribute="bottom" constant="20" id="so4-ta-fnz"/>
+                            <constraint firstAttribute="centerX" secondItem="5Ms-mG-beD" secondAttribute="centerX" id="v8Z-7h-i89"/>
+                            <constraint firstAttribute="centerY" secondItem="5Ms-mG-beD" secondAttribute="centerY" id="vo0-yX-NDb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="priceTextField" destination="Kzj-gv-hc0" id="qag-oP-f83"/>
+                        <outlet property="resultLabel" destination="AHQ-uz-Sde" id="kq2-SV-iqk"/>
+                        <outlet property="segmentedControl" destination="VaV-si-fee" id="wqe-ff-Bai"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="205" y="353"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gold_bg" width="160" height="284"/>
+    </resources>
 </document>
